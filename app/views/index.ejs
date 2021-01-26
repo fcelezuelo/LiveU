@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiveU</title>
+  <link type="text/css" rel="stylesheet" href="/css/semantic.min.css">
+  <link type="text/css" rel="stylesheet" href="/css/global.css">
+</head>
+
+<body>
+  <div class="ui raised very padded text container segment">
+    <h1 class="ui header">Desafio LiveU</h1>
+    <h5 class="ui header">por Fellipe Celezuelo</h5><br>
+    <form class="ui form" method="POST" action="/create">
+      <div class="field">
+        <input type="text" name="nome" placeholder="Nome">
+      </div>
+      <div class="field">
+        <input type="text" name="sobrenome" placeholder="Sobrenome">
+      </div>
+      <div class="field">
+        <input type="text" name="email" placeholder="Email">
+      </div>
+      <button class="ui button" type="submit">Enviar</button>
+    </form>
+
+    <% if (result) { %>
+      <h4 class="ui horizontal divider header">
+        <i class="tag icon"></i>
+        Resultado
+      </h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td class="two wide column">Animal</td>
+            <td><%= result.animal %></td>
+          </tr>
+          <tr>
+            <td>Cor</td>
+            <td><%= result.cor %></td>
+          </tr>
+          <tr>
+            <td>País</td>
+            <td><%= result.pais %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% } %>
+
+  </div>
+
+
+  <script src="/js/semantic.min.js"></script>
+</body>
+
+</html>
